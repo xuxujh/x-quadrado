@@ -1,0 +1,129 @@
+.about {
+  position: relative;
+
+  background: var(--xq-paper);
+  color: var(--xq-black);
+
+  padding:
+    var(--xq-section-space)
+    var(--xq-gutter)
+    clamp(5rem, 8vw, 8rem);
+}
+
+.inner {
+  width: min(100%, var(--xq-container-max));
+  margin-inline: auto;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1.2rem;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+
+  border-bottom: 1px solid rgba(9, 9, 9, 0.15);
+
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(4rem, 7vw, 9rem);
+
+  align-items: start;
+
+  h2 {
+    font-size: clamp(3.7rem, 6.4vw, 7.8rem);
+    line-height: 0.91;
+    letter-spacing: -0.055em;
+    font-weight: 400;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  padding-top: 0.4rem;
+
+  p {
+    max-width: 520px;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+
+    color: var(--xq-gray-700);
+  }
+
+  .lead {
+    font-size: clamp(1.3rem, 1.9vw, 1.9rem);
+    line-height: 1.38;
+
+    color: var(--xq-black);
+  }
+
+  a {
+    width: fit-content;
+
+    margin-top: 0.8rem;
+    padding-bottom: 0.4rem;
+
+    border-bottom: 1px solid currentColor;
+
+    font-size: 0.67rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
+.transition {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: clamp(6rem, 10vw, 11rem);
+  padding-top: 1.1rem;
+
+  border-top: 1px solid rgba(9, 9, 9, 0.15);
+
+  span {
+    font-size: 0.59rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    opacity: 0.45;
+  }
+
+  span:not(:first-child) {
+    text-align: center;
+  }
+
+  span:last-child {
+    text-align: right;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .copy {
+    margin-top: 1.5rem;
+  }
+
+  .transition {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    span,
+    span:not(:first-child),
+    span:last-child {
+      text-align: left;
+    }
+  }
+}

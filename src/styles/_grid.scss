@@ -1,0 +1,34 @@
+/* =========================================================
+   X-QUADRADO — GRID
+   ========================================================= */
+
+.xq-container {
+  width: min(
+    calc(100% - (var(--xq-gutter) * 2)),
+    var(--xq-container-max)
+  );
+
+  margin-inline: auto;
+}
+
+.xq-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--xq-grid-gap);
+}
+
+.xq-section {
+  padding-block: var(--xq-section-space);
+}
+
+@media (max-width: 1024px) {
+  .xq-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .xq-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

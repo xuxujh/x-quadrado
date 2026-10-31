@@ -1,0 +1,70 @@
+/* =========================================================
+   X-QUADRADO — TYPOGRAPHY
+   ========================================================= */
+
+body {
+  font-family: var(--xq-font-primary);
+  font-size: var(--xq-font-body);
+  line-height: var(--xq-leading-body);
+  font-weight: 400;
+  color: var(--xq-text);
+  background: var(--xq-bg);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.xq-display-xl {
+  font-size: var(--xq-font-display-xl);
+  line-height: var(--xq-leading-display);
+  letter-spacing: var(--xq-tracking-tight);
+}
+
+.xq-display {
+  font-size: var(--xq-font-display);
+  line-height: var(--xq-leading-display);
+  letter-spacing: var(--xq-tracking-tight);
+}
+
+.xq-h1 {
+  font-size: var(--xq-font-h1);
+  line-height: var(--xq-leading-heading);
+  letter-spacing: var(--xq-tracking-tight);
+}
+
+.xq-h2 {
+  font-size: var(--xq-font-h2);
+  line-height: var(--xq-leading-heading);
+  letter-spacing: -0.025em;
+}
+
+.xq-h3 {
+  font-size: var(--xq-font-h3);
+  line-height: 1.15;
+}
+
+.xq-body-lg {
+  font-size: var(--xq-font-body-lg);
+  line-height: 1.55;
+}
+
+.xq-label {
+  font-size: var(--xq-font-micro);
+  line-height: 1;
+  letter-spacing: var(--xq-tracking-label);
+  text-transform: uppercase;
+}
+
+p {
+  text-wrap: pretty;
+}

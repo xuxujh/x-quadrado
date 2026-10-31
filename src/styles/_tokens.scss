@@ -1,0 +1,126 @@
+/* =========================================================
+   X-QUADRADO — DESIGN TOKENS
+   Fundação visual global
+   ========================================================= */
+
+:root {
+  /* ---------------------------------
+     Colors
+     --------------------------------- */
+
+  --xq-black: #090909;
+  --xq-white: #ffffff;
+
+  --xq-paper: #f5f4f0;
+  --xq-paper-deep: #eceae4;
+
+  --xq-gray-100: #e3e1db;
+  --xq-gray-300: #bbb8b0;
+  --xq-gray-500: #7b7973;
+  --xq-gray-700: #41413e;
+  --xq-gray-900: #171716;
+
+  --xq-bg: var(--xq-paper);
+  --xq-surface: var(--xq-white);
+  --xq-text: var(--xq-black);
+  --xq-text-muted: var(--xq-gray-500);
+  --xq-border-color: var(--xq-gray-100);
+
+  /* Cor de sinal será definida posteriormente */
+  --xq-signal: var(--xq-black);
+
+  /* ---------------------------------
+     Typography
+     --------------------------------- */
+
+  --xq-font-primary:
+    "Century Gothic",
+    "CenturyGothic",
+    "AppleGothic",
+    "Avenir Next",
+    Avenir,
+    Futura,
+    Arial,
+    sans-serif;
+
+  --xq-font-mono:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  --xq-font-display-xl: clamp(4.5rem, 9.5vw, 10rem);
+  --xq-font-display: clamp(3.75rem, 7vw, 7rem);
+  --xq-font-h1: clamp(3rem, 5.5vw, 5rem);
+  --xq-font-h2: clamp(2.25rem, 4vw, 4rem);
+  --xq-font-h3: clamp(1.5rem, 2.3vw, 2.25rem);
+
+  --xq-font-body-lg: clamp(1.125rem, 1.5vw, 1.5rem);
+  --xq-font-body: clamp(1rem, 1.1vw, 1.125rem);
+  --xq-font-small: 0.875rem;
+  --xq-font-micro: 0.6875rem;
+
+  --xq-leading-display: 0.92;
+  --xq-leading-heading: 1.05;
+  --xq-leading-body: 1.65;
+
+  --xq-tracking-tight: -0.035em;
+  --xq-tracking-normal: 0;
+  --xq-tracking-wide: 0.08em;
+  --xq-tracking-label: 0.14em;
+
+  /* ---------------------------------
+     Spacing — base 8px
+     --------------------------------- */
+
+  --xq-space-1: 0.5rem;
+  --xq-space-2: 1rem;
+  --xq-space-3: 1.5rem;
+  --xq-space-4: 2rem;
+  --xq-space-5: 2.5rem;
+  --xq-space-6: 3rem;
+  --xq-space-8: 4rem;
+  --xq-space-10: 5rem;
+  --xq-space-12: 6rem;
+  --xq-space-16: 8rem;
+  --xq-space-20: 10rem;
+
+  /* ---------------------------------
+     Layout
+     --------------------------------- */
+
+  --xq-container-max: 100rem;
+  --xq-gutter: clamp(1.25rem, 4vw, 4.5rem);
+  --xq-section-space: clamp(6rem, 10vw, 10rem);
+
+  --xq-grid-columns: 12;
+  --xq-grid-gap: clamp(1rem, 2vw, 2rem);
+
+  /* ---------------------------------
+     Borders
+     --------------------------------- */
+
+  --xq-border-width: 1px;
+  --xq-radius-xs: 2px;
+
+  /* ---------------------------------
+     Motion
+     --------------------------------- */
+
+  --xq-duration-fast: 160ms;
+  --xq-duration-base: 320ms;
+  --xq-duration-slow: 650ms;
+
+  --xq-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --xq-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---------------------------------
+     Z-index
+     --------------------------------- */
+
+  --xq-z-base: 1;
+  --xq-z-header: 100;
+  --xq-z-overlay: 500;
+  --xq-z-modal: 1000;
+}

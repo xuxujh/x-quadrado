@@ -1,0 +1,22 @@
+@use "../styles/tokens";
+@use "../styles/reset";
+@use "../styles/typography";
+@use "../styles/grid";
+@use "../styles/animations";
+
+html {
+  background: var(--xq-bg);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}

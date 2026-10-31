@@ -1,0 +1,174 @@
+.footer {
+  background: #090909;
+  color: #fff;
+
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    var(--xq-gutter)
+    2rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.inner {
+  width: min(100%, var(--xq-container-max));
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr 3fr;
+  gap: var(--xq-grid-gap);
+
+  padding-bottom: clamp(5rem, 8vw, 9rem);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 220px;
+
+  p {
+    max-width: 320px;
+
+    font-size: 0.78rem;
+    line-height: 1.55;
+
+    opacity: 0.45;
+  }
+}
+
+.mark {
+  font-size: clamp(4rem, 7vw, 8rem);
+  line-height: 0.85;
+
+  letter-spacing: -0.07em;
+  font-weight: 400;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  > span {
+    margin-bottom: 1rem;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    opacity: 0.35;
+  }
+
+  a {
+    font-size: 0.8rem;
+
+    transition:
+      opacity var(--xq-duration-fast),
+      transform var(--xq-duration-fast);
+  }
+
+  a:hover {
+    opacity: 0.5;
+    transform: translateX(2px);
+  }
+}
+
+.location {
+  margin-top: 1.2rem;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  opacity: 0.35;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--xq-grid-gap);
+
+  align-items: center;
+
+  padding-top: 1.4rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  opacity: 0.6;
+}
+
+.copyrightMark {
+  width: 27px;
+  height: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+
+  font-size: 0.8rem;
+  line-height: 1;
+
+  letter-spacing: 0;
+}
+
+.year {
+  justify-self: center;
+
+  opacity: 0.35;
+}
+
+.backTop {
+  justify-self: end;
+
+  opacity: 0.55;
+
+  transition:
+    opacity var(--xq-duration-fast),
+    transform var(--xq-duration-fast);
+}
+
+.backTop:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+
+    min-height: 180px;
+
+    margin-bottom: 2rem;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .year,
+  .backTop {
+    justify-self: start;
+  }
+}

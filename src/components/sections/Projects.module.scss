@@ -1,0 +1,165 @@
+.projects {
+  background: #0a0a0a;
+  color: #fff;
+
+  padding:
+    var(--xq-section-space)
+    var(--xq-gutter);
+}
+
+.inner {
+  width: min(100%, var(--xq-container-max));
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: var(--xq-grid-gap);
+
+  margin-bottom: clamp(5rem, 8vw, 9rem);
+
+  > span {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  h2 {
+    font-size: clamp(3rem, 5.5vw, 6.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6rem, 10vw, 12rem);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: var(--xq-grid-gap);
+  align-items: stretch;
+}
+
+.reverse {
+  grid-template-columns: 4fr 8fr;
+
+  .imageWrap {
+    order: 2;
+  }
+
+  .info {
+    order: 1;
+  }
+}
+
+.imageWrap {
+  position: relative;
+
+  min-height: clamp(480px, 52vw, 780px);
+
+  overflow: hidden;
+
+  background: #f4f1ec;
+}
+
+.image {
+  object-fit: contain;
+  object-position: center;
+
+  padding: clamp(2rem, 5vw, 6rem);
+
+  transition: transform 900ms var(--xq-ease-standard);
+}
+
+.project:hover .image {
+  transform: scale(1.025);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+
+.number,
+.category,
+.info a {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.number {
+  opacity: 0.45;
+}
+
+.category {
+  margin-bottom: 1rem;
+  opacity: 0.45;
+}
+
+.info h3 {
+  max-width: 420px;
+
+  font-size: clamp(2rem, 3.3vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+}
+
+.info a {
+  width: fit-content;
+
+  padding-bottom: 0.35rem;
+
+  border-bottom: 1px solid rgba(255,255,255,0.45);
+}
+
+@media (max-width: 900px) {
+  .top,
+  .project,
+  .reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse {
+    .imageWrap,
+    .info {
+      order: initial;
+    }
+  }
+
+  .info {
+    min-height: 280px;
+  }
+
+  .imageWrap {
+    min-height: 65svh;
+  }
+}
+
+.imageData {
+  object-fit: contain;
+  object-position: center;
+
+  padding: 0;
+
+  transform: scale(0.98);
+}
+
+.project:hover .imageData {
+  transform: scale(1);
+}
+
+
